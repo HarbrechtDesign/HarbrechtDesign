@@ -1,0 +1,77 @@
+/**
+ *
+ * --------------------------------
+ *  CSS Style
+ * -------------------------------
+ *
+ */
+
+// Variables
+@import "variables";
+// Breakpoints
+@import "layout";
+// Helpers
+@import "reset";
+@import "mixins";
+@import "typography";
+// Imports
+
+*,
+*::before,
+*::after {
+	position: relative;
+	box-sizing: border-box;
+}
+
+:root {
+	// Set 1rem = 10px, so 1.6rem is 16px, etc
+	font-size: 62.5%;
+}
+
+p {
+
+}
+
+// Fancybox
+.fancybox-navigation {
+	position: unset;
+}
+
+@include media("<sm") {
+	.fancybox-slide {
+		padding: 44px 0;
+	}
+}
+
+body {
+	font-family: $font;
+	font-size: $text-size;
+	line-height: 1.4;
+	font-weight: $text-regular;
+	background: $purple;
+	color: var(--text-color);
+	width: 100%;
+	-webkit-overflow-scrolling: touch;
+	overflow-x: hidden;
+	@include media("<xs") {
+		font-size: 1.6rem;
+	}
+}
+.container {
+	max-width: 1200px;
+	margin: auto;
+	padding: 0 1.5rem;
+}
+
+header {
+	h1 {
+		&::before {
+			content: ">\A0";
+		}
+		&::after {
+			content: "|\00a0\00a0";
+			background: $white;
+			margin-left: 0.25rem;
+		}
+	}
+}

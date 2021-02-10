@@ -1,0 +1,51 @@
+// colors
+$black: #000;
+$white: #fff;
+$pink: #ffd6ff;
+$light-purple: #e7c6ff;
+$purple: #c8b6ff;
+$dark-blue: #b8c0ff;
+$blue: #bbd0ff;
+
+// Typography
+$text-color: #1A1A1A;
+$font: "Source Sans Pro", sans-serif;;
+$font-system: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, helvetica, arial, sans-serif;
+$text-size: 1.8rem;
+$text-style: normal;
+$text-light: 300;
+$text-regular: 400;
+$text-medium: 500;
+$text-semi-bold: 600;
+$text-bold: 700;
+$text-extra-bold: 800;
+$text-extra-heckin-bold: 850;
+
+// Easings
+$standard-ease: cubic-bezier(0.4, 0, 0.2, 1);
+$decelerate-ease: cubic-bezier(0, 0, 0.2, 1);
+$accelerate-ease: cubic-bezier(0.4, 0, 1, 1);
+
+// Mobile Nav
+$nav-timing: 100ms;
+$nav-left-offset: 60vw;
+$nav-top-offset: 95px;
+$nav-top-offset-sm: 60px;
+
+:root {
+	// Colors
+	--black: #{$black};
+	--white: #{$white};
+	// Typography
+	--text-color: #{$text-color};
+	--text-light: #{$text-light};
+	--text-regular: #{$text-regular};
+	--text-medium: #{$text-medium};
+	--text-semi-bold: #{$text-semi-bold};
+	--text-bold: #{$text-bold};
+	--text-extra-bold: #{$text-extra-bold};
+	--text-extra-heckin-bold: #{$text-extra-heckin-bold};
+	// Mobile Nav
+	--nav-timing: #{$nav-timing};
+	--standard-ease: #{$standard-ease};
+}
