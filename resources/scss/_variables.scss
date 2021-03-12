@@ -1,17 +1,21 @@
 // colors
 $black: #000;
 $white: #fff;
-$pink: #ffd6ff;
-$light-purple: #e7c6ff;
-$purple: #c8b6ff;
-$dark-blue: #b8c0ff;
-$blue: #bbd0ff;
+$background: #222a36;
+$darker: #1f2632;
+$purple: #676cdb;
+$blue: #3aafc9;
+$green: #03bb91;
+$grey: #191919;
+$browser-red: #ff5f57;
+$browser-yellow: #febc2e;
+$browser-green: #28c840;
 
 // Typography
-$text-color: #1A1A1A;
-$font: "Source Sans Pro", sans-serif;;
+$text-color: #C0C0C0;
+$font: Gothic A1;
 $font-system: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, helvetica, arial, sans-serif;
-$text-size: 1.8rem;
+$text-size: 2.2rem;
 $text-style: normal;
 $text-light: 300;
 $text-regular: 400;
@@ -36,6 +40,15 @@ $nav-top-offset-sm: 60px;
 	// Colors
 	--black: #{$black};
 	--white: #{$white};
+	--background: #{$background};
+	--darker: #{$darker};
+	--purple: #{$purple};
+	--blue: #{$blue};
+	--green: #{$green};
+	--grey: #{$grey};
+	--browser-red: #{$browser-red};
+	--browser-yellow: #{$browser-yellow};
+	--browser-green: #{$browser-green};
 	// Typography
 	--text-color: #{$text-color};
 	--text-light: #{$text-light};

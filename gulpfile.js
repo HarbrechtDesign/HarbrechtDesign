@@ -46,7 +46,7 @@ gulp.task("css", function() {
 
 gulp.task("js", function() {
     gulp
-        .src(["./node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min","./node_modules/body-scroll-lock/lib/bodyScrollLock.js", "resources/js/app.js"])
+        .src(["resources/js/velocity.min.js","./node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min","./node_modules/body-scroll-lock/lib/bodyScrollLock.js", "resources/js/app.js"])
         .pipe(concat("app.js"))
         .pipe(gulp.dest("public/js"))
         .pipe(uglify())
