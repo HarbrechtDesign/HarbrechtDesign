@@ -61,7 +61,7 @@ body {
 	}
 }
 .gradient {
-	z-index: 999;
+	z-index: 900;
 	width: 100%;
 	position: fixed;
 	left: 0;
@@ -107,7 +107,25 @@ section {
 	max-height: 1000px;
 	gap: 2rem;
 }
+.modal-overlay {
+	display: none;
+	opacity: 0;
 
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 990;
+	background: rgba($black,0.6);
+	transition: opacity var(--modalTiming) var(--standard-ease);
+}
+body.modal-open {
+	.modal-overlay {
+		display: block;
+		opacity: 1;
+	}
+}
 .card {
 	--termHead: 28px;
 	display: flex;
@@ -116,7 +134,9 @@ section {
 	background: var(--darker);
 	position: relative;
 	padding: 2rem;
+	transition: var(--modalTiming) var(--standard-ease);
 	@include box-shadow(3dp);
+	border-radius: 10px 10px 0 0;
 	.term-head {
 		position: absolute;
 		left: 0;
@@ -232,9 +252,21 @@ section {
 		margin-top: 4rem;
 		margin-bottom: 1rem;
 	}
+	.modal-content {
+		display: none;
+	}
 	a {
 		svg {
 			width: 15px;
+		}
+	}
+	&.open {
+		// width: 80vw !important;
+		// height: 80vh !important;
+		z-index: 999;
+		justify-content: flex-start;
+		.modal-content {
+			display: block;
 		}
 	}
 }

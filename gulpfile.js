@@ -49,11 +49,11 @@ gulp.task("js", function() {
         .src(["resources/js/velocity.min.js","./node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min","./node_modules/body-scroll-lock/lib/bodyScrollLock.js", "resources/js/app.js"])
         .pipe(concat("app.js"))
         .pipe(gulp.dest("public/js"))
-        .pipe(uglify())
-        .pipe(rename({ suffix: ".min" }))
         .on("error", function(err) {
             gutil.log(gutil.colors.red("[Error]"), err.toString());
         })
+        .pipe(uglify())
+        .pipe(rename({ suffix: ".min" }))
         .pipe(gulp.dest("public/js"))
         .pipe(browserSync.reload({ stream: true, once: true }));
 });
